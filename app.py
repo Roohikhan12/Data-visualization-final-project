@@ -24,8 +24,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\Mubeen Khan\OneDrive\Desktop\Data-analytics-visulaition-project\airbnb_clean.csv")
-
+    return pd.read_csv("airbnb_clean.csv")
 df = load_data()
 
 df["neighbourhood group"] = df["neighbourhood group"].astype(str).str.strip()
